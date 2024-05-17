@@ -3,4 +3,45 @@
 
 *{
   font-family: "Poppons", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Universal styles */
+.paddings{
+  padding: 1.5rem;
+}
+
+a{
+  color: #fff;
+}
+
+.inner-width{
+  width: 100%;
+}
+
+.flex-center{
+  display: flex;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button{
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  columns: #fff;
+  background: linear-gradient(97.05deg, #4066ff 3.76%, #000) ;
+  border: none;
+  border-radius: 4px;
+  transition: all 300ms ease-in;
+}
+
+.button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
