@@ -1,30 +1,33 @@
 import React from 'react'
 import './stylesheets/Header.css'
 import Logo from '/src/assets/Images/BlueView-logo.png'
+import { Link, NavLink } from 'react-router-dom'
 const Header = () => {
     return (
         // Nav section
         <nav>
             <section className='h-wrapper'>
                 <div className="flex-center paddings inner-width h-container">
-                    <img src={Logo} alt="Logo" width={80}/>
+                    <Link to='/' className='img-link'>
+                        <img src={Logo} alt="Logo" width={100}/>
+                    </Link>
 
                     <ul className="flex-center h-menu">
                         <li>
-                            <a to='/residencies'>Residencies</a>
+                            <NavLink to='/residencies'>Residencies</NavLink>
                         </li>
                         <li>
-                            <a to='/values'>Our Values</a>
+                            <NavLink to='/values'>Our Values</NavLink>
                         </li>
                         <li>
-                            <a to='/contact'>Contact Us</a>
+                            <NavLink to='/contact'>Contact Us</NavLink>
                         </li>
                         <li>
-                            <a to='/user'>Get Started</a>
+                            <NavLink to='/user'>Get Started</NavLink>
                         </li>
                         <button className='button'>
                             <li>
-                                <a to=''>Contact</a>
+                                <NavLink to=''>Contact</NavLink>
                             </li>
                         </button>
                     </ul>
