@@ -8,7 +8,7 @@
     display: flex;
 }
 
-.h-container img {
+.h-container .img-link{
     margin-right: 20%;
 }
 
