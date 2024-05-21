@@ -3,13 +3,17 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // importations of components & pages
 import Layout from './assets/Components/Layout';
-import Header from './assets/Components/Header'
+import Home from './assets/Components/Pages/Home';
 import './App.css'
 
 // Routes definitions
 const router = createBrowserRouter([
   {
-    path: '/', element: <Layout/>
+    path: '/', element: <Layout/>,children:[
+      {
+        index:true, element: <Home />
+      }
+    ]
   }
 ])
 function App() {
