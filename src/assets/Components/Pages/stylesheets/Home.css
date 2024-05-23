@@ -20,13 +20,6 @@
     z-index: 1;
 }
 
-.flex-col-start{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
 .cover-title > h1{
     font-weight: bolder;
     font-size: 3.8rem;
@@ -56,6 +49,18 @@
     border: none;
     outline: none;
     width: 250px;
+}
+
+#stats{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.stat>:nth-child(1){
+    font-size: 2rem;
+}
+.stat>:nth-child(1)>:last-child{
+    color: orange;
 }
 
 .img-container{
