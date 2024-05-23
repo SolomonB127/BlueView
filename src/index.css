@@ -35,7 +35,7 @@ a{
 .button{
   font-weight: 500;
   padding: 0.6rem 1.4rem;
-  columns: #fff;
+  color: #fff;
   background: linear-gradient(97.05deg, #4066ff 3.76%, #0a2455) ;
   border: none;
   border-radius: 4px;
