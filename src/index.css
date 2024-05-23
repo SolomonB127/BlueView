@@ -32,6 +32,26 @@ a{
   flex-wrap: wrap;
 }
 
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flex-col-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.secondaryText {
+  color: rgb(140 139 139);
+  font-size: 0.9rem;
+}
+
+
 .button{
   font-weight: 500;
   padding: 0.6rem 1.4rem;
