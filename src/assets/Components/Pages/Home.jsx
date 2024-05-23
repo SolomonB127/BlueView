@@ -1,6 +1,7 @@
 import React from 'react';
 import './stylesheets/Home.css'
 import CoverImg from '/src/assets/Images/cover-img.png'
+import { HiLocationMarker } from "react-icons/hi";
 const Home = () => {
     return (
     <main>
@@ -23,8 +24,10 @@ const Home = () => {
                         </span>
                     </section>
 
-                    <section className="search-bar">
-                        searchBar
+                    <section className="flex-center search-bar">
+                    <HiLocationMarker color='#4066ff' size={25} />
+                    <input type="text" name="" id="" />
+                    <button className='button'>Search</button>
                     </section>
                 </div>
 
