@@ -17,10 +17,10 @@ const Home = () => {
                     </section>
 
                     <section className="flex-col-start cover-desc">
-                        <span>
+                        <span className='secondaryText'>
                             find a variety of properties that suits you very easily.
                         </span>
-                        <span>
+                        <span className='secondaryText'>
                             forget all difficulties in finding a residence for you.
                         </span>
                     </section>
