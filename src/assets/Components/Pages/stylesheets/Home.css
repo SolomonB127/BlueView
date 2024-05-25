@@ -77,3 +77,12 @@
     border-radius: 15rem 15rem 0 0;
     border: 8px solid rgba(255, 255, 255, 0.12);
 }
+
+/* Companies */
+#c-container{
+    justify-content: space-around;
+    gap: 1rem;
+}
+#c-container > img{
+    width: 9rem;
+}
