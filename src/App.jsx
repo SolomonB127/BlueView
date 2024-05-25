@@ -1,8 +1,10 @@
 // Importations of hooks
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 
 // importations of components & pages
-import Layout from './assets/Components/Layout';
+import Loader from './assets/Components/Loader';
+const Layout = lazy(() => import('./assets/Components/Layout'));
 import Home from './assets/Components/Pages/Home';
 import './App.css'
 
@@ -20,7 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <RouterProvider router={router}/>
+      <Suspense fallback={<Loader />}>
+        <RouterProvider router={router}/>
+      </Suspense>
     </div>
   )
 }
