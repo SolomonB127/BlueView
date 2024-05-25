@@ -3,6 +3,10 @@ import './stylesheets/Home.css'
 import CoverImg from '/src/assets/Images/cover-img.png'
 import { HiLocationMarker } from "react-icons/hi";
 import CountUp from 'react-countup';
+import Equinix from '/src/assets/Images/equinix.png';
+import Prologis from '/src/assets/Images/prologis.png';
+import Realty from '/src/assets/Images/realty.png';
+import Tower from '/src/assets/Images/tower.png';
 const Home = () => {
     return (
     <main>
@@ -65,6 +69,16 @@ const Home = () => {
                         <img src={CoverImg} alt="" />
                     </section>
                 </div>
+            </div>
+        </section>
+
+        {/* Companies */}
+        <section className='c-wrapper'>
+            <div className="paddings inner-width flex-center" id='c-container'>
+                <img src={Prologis} alt="" />
+                <img src={Tower} alt="" />
+                <img src={Equinix} alt="" />
+                <img src={Realty} alt="" />
             </div>
         </section>
     </main>
