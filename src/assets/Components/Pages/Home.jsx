@@ -10,6 +10,7 @@ import CountUp from 'react-countup';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css'
 import data from '../../utils/server.js'
+import { sliderSettings } from '../../utils/settings.js';
 const Home = () => {
     return (
     <main>
@@ -93,7 +94,10 @@ const Home = () => {
                     <span className='primaryText'>Popular Residences</span>
                 </section>
 
-                <Swiper>
+                {/*Using the Slider component, 
+                mapping through the data in server.js file & 
+                Destructuring sliderSetting */}
+                <Swiper  {...sliderSettings} breakpoints={sliderSettings.breakPoints}> 
                     {
                         data.map((card,i)=>{
                             return(
