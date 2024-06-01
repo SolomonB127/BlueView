@@ -98,6 +98,9 @@ const Home = () => {
                 mapping through the data in server.js file & 
                 Destructuring sliderSetting */}
                 <Swiper  {...sliderSettings} breakpoints={sliderSettings.breakPoints}> 
+                {/* Slider buttons */}
+                <SliderBtn />
+
                     {
                         data.map((card,i)=>{
                             return(
@@ -123,3 +126,14 @@ const Home = () => {
 }
 
 export default Home
+
+// Slider buttons logic
+const SliderBtn = () => {
+    const swiper = useSwiper();
+    return(
+        <div className="flex-center r-buttons">
+            <button onClick={() => swiper.slidePrev()}>&lt;</button>
+            <button onClick={() => swiper.slideNext()}>&gt;</button>
+        </div>
+    )
+}
