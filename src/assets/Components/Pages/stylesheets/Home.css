@@ -88,6 +88,9 @@
 }
 
 /* Residencies */
+.r-container{
+    overflow: hidden;
+}
 .r-head{
     margin-bottom: 2rem;
 }
