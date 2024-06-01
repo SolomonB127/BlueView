@@ -1,12 +1,15 @@
 import React from 'react';
 import './stylesheets/Home.css'
 import CoverImg from '/src/assets/Images/cover-img.png'
-import { HiLocationMarker } from "react-icons/hi";
-import CountUp from 'react-countup';
 import Equinix from '/src/assets/Images/equinix.png';
 import Prologis from '/src/assets/Images/prologis.png';
 import Realty from '/src/assets/Images/realty.png';
 import Tower from '/src/assets/Images/tower.png';
+import { HiLocationMarker } from "react-icons/hi";
+import CountUp from 'react-countup';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import 'swiper/css'
+import data from '../../utils/server.js'
 const Home = () => {
     return (
     <main>
@@ -79,6 +82,36 @@ const Home = () => {
                 <img src={Tower} alt="" />
                 <img src={Equinix} alt="" />
                 <img src={Realty} alt="" />
+            </div>
+        </section>
+
+        {/* Residencies */}
+        <section className="r-wrapper">
+            <div className="paddings inner-width r-container">
+                <section className="r-head flex-col-start">
+                    <span className='orangeText'>Best Choices</span>
+                    <span className='primaryText'>Popular Residences</span>
+                </section>
+
+                <Swiper>
+                    {
+                        data.map((card,i)=>{
+                            return(
+                                <SwiperSlide key={i}>
+                                <div className="flex-col-start r-card">
+                                    <img src={card.image} alt="home" />
+                                    <span className="seconadryText r-price">
+                                        <span style={{color: "orange"}}>$</span><span>{card.price}</span>
+                                    </span>
+
+                                    <span className='primaryText'>{card.name}</span>
+                                    <span className='secondaryText'>{card.detail}</span>
+                                </div>
+                            </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
             </div>
         </section>
     </main>
