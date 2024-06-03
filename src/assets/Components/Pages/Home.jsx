@@ -98,6 +98,7 @@ const Home = () => {
                 mapping through the data in server.js file & 
                 Destructuring sliderSetting */}
                 <Swiper  {...sliderSettings} breakpoints={sliderSettings.breakPoints}> 
+
                 {/* Slider buttons */}
                 <SliderBtn />
 
@@ -121,6 +122,8 @@ const Home = () => {
                 </Swiper>
             </div>
         </section>
+
+        {/* Values*/}
     </main>
     )
 }
@@ -132,8 +135,8 @@ const SliderBtn = () => {
     const swiper = useSwiper();
     return(
         <div className="flex-center r-buttons">
-            <button onClick={() => swiper.slidePrev()}>&lt;</button>
-            <button onClick={() => swiper.slideNext()}>&gt;</button>
+            <button onClick={() => swiper.slidePrev()}>{"<"}</button>
+            <button onClick={() => swiper.slideNext()}>{">"}</button>
         </div>
     )
 }
