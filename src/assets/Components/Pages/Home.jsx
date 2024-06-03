@@ -1,14 +1,31 @@
 import React from 'react';
 import './stylesheets/Home.css'
+
+// Images
 import CoverImg from '/src/assets/Images/cover-img.png'
 import Equinix from '/src/assets/Images/equinix.png';
 import Prologis from '/src/assets/Images/prologis.png';
 import Realty from '/src/assets/Images/realty.png';
 import Tower from '/src/assets/Images/tower.png';
+
+// Icons
 import { HiLocationMarker } from "react-icons/hi";
+import { MdOutlineArrowDropDown } from 'react-icons/md';
+
+// Libraries
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css'
+import { 
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+    AccordionItemState
+} from 'react-accessible-accordion';
+import "react-accessible-accordion/dist/fancy-example.css"
+// Utilities
 import data from '../../utils/server.js'
 import { sliderSettings } from '../../utils/settings.js';
 const Home = () => {
@@ -124,6 +141,7 @@ const Home = () => {
         </section>
 
         {/* Values*/}
+
     </main>
     )
 }
