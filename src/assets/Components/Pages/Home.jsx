@@ -145,7 +145,6 @@ const Home = () => {
         {/* Values*/}
         <section className="v-wrapper">
             <div className="paddings inner-width flex-center v-container">
-                {/* left section */}
                 <section className="v-left">
                     <div className="img-container">
                         <img src={valueImg} alt="" />
