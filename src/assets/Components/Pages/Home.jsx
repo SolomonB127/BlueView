@@ -7,6 +7,7 @@ import Equinix from '/src/assets/Images/equinix.png';
 import Prologis from '/src/assets/Images/prologis.png';
 import Realty from '/src/assets/Images/realty.png';
 import Tower from '/src/assets/Images/tower.png';
+import valueImg from '/src/assets/Images/value.png'
 
 // Icons
 import { HiLocationMarker } from "react-icons/hi";
@@ -25,6 +26,7 @@ import {
     AccordionItemState
 } from 'react-accessible-accordion';
 import "react-accessible-accordion/dist/fancy-example.css"
+
 // Utilities
 import data from '../../utils/server.js'
 import { sliderSettings } from '../../utils/settings.js';
@@ -114,7 +116,7 @@ const Home = () => {
                 {/*Using the Slider component, 
                 mapping through the data in server.js file & 
                 Destructuring sliderSetting */}
-                <Swiper  {...sliderSettings} breakpoints={sliderSettings.breakPoints}> 
+                <Swiper  {...sliderSettings} breakpoints={sliderSettings.breakpoints}> 
 
                 {/* Slider buttons */}
                 <SliderBtn />
@@ -141,7 +143,26 @@ const Home = () => {
         </section>
 
         {/* Values*/}
+        <section className="v-wrapper">
+            <div className="paddings inner-width flex-center v-container">
+                {/* left section */}
+                <section className="v-left">
+                    <div className="img-container">
+                        <img src={valueImg} alt="" />
+                    </div>
+                </section>
 
+                <section className="flex-col-start v-right">
+                    <span className='orangeText'>Our Value</span>
+                    <span className='primaryText'>Value We Give to You</span>
+                    <span className='secondaryText'>
+                        We are always ready to help by providing the best services for you.
+                        <br />
+                        We believe a good place to live can make your life better.
+                    </span>
+                </section>
+            </div>
+        </section>
     </main>
     )
 }
