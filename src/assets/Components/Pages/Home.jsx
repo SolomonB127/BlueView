@@ -1,13 +1,13 @@
 import React from 'react';
-import './stylesheets/Home.css'
+import './stylesheets/Home.css';
 
 // Images
-import CoverImg from '/src/assets/Images/cover-img.png'
+import CoverImg from '/src/assets/Images/cover-img.png';
 import Equinix from '/src/assets/Images/equinix.png';
 import Prologis from '/src/assets/Images/prologis.png';
 import Realty from '/src/assets/Images/realty.png';
 import Tower from '/src/assets/Images/tower.png';
-import valueImg from '/src/assets/Images/value.png'
+import valueImg from '/src/assets/Images/value.png';
 
 // Icons
 import { HiLocationMarker } from "react-icons/hi";
@@ -16,7 +16,7 @@ import { MdOutlineArrowDropDown } from 'react-icons/md';
 // Libraries
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import 'swiper/css'
+import 'swiper/css';
 import { 
     Accordion,
     AccordionItem,
@@ -25,11 +25,12 @@ import {
     AccordionItemPanel,
     AccordionItemState
 } from 'react-accessible-accordion';
-import "react-accessible-accordion/dist/fancy-example.css"
+import "react-accessible-accordion/dist/fancy-example.css";
 
 // Utilities
-import data from '../../utils/server.js'
+import data from '../../utils/server.js';
 import { sliderSettings } from '../../utils/settings.js';
+import Adata from '../../utils/accordion.jsx'
 const Home = () => {
     return (
     <main>
@@ -159,6 +160,29 @@ const Home = () => {
                         <br />
                         We believe a good place to live can make your life better.
                     </span>
+
+                    {/* Accordion */}
+                    <Accordion
+                        className="accordion"
+                        allowMultipleExpanded={0}
+                        preExpanded={[0]}
+                        >
+                        {Adata.map((item, i) => (
+                            <AccordionItem className='accodionItem' key={i} uuid={i}>
+                                <AccordionItemHeading>
+                                    <AccordionItemButton>
+                                        <div className="flex-center icon">{item.icon}</div>
+                                        <span className="primaryText">
+                                            {item.heading}
+                                        </span>
+                                        <div className="flex-center icon">
+                                            <MdOutlineArrowDropDown size={20}/>
+                                        </div>
+                                    </AccordionItemButton>
+                                </AccordionItemHeading>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
                 </section>
             </div>
         </section>
