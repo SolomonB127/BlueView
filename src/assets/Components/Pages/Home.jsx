@@ -8,6 +8,7 @@ import Prologis from '/src/assets/Images/prologis.png';
 import Realty from '/src/assets/Images/realty.png';
 import Tower from '/src/assets/Images/tower.png';
 import valueImg from '/src/assets/Images/value.png';
+import contactImg from '/src/assets/Images/contact.jpg'
 
 // Icons
 import { HiLocationMarker } from "react-icons/hi";
@@ -193,6 +194,22 @@ const Home = () => {
                         }
                         )}
                     </Accordion>
+                </section>
+            </div>
+        </section>
+
+        {/* Contact  */}
+        <section className="c-wrapper">
+            <div className="paddings inner-width flex-center c-container">
+                <section className="flex-col-start c-left">
+                    <span className='orangeText'>Our Contact</span>
+                    <span  className='primaryText'>Easy to Contact us</span>
+                    <span  className='secondaryText'>We are always ready to help by providing the best services for you. We believe a good place to live can make your life better.</span>
+                </section>
+                <section className="c-right">
+                    <div className="img-container">
+                        <img src={contactImg} alt="" />
+                    </div>
                 </section>
             </div>
         </section>
