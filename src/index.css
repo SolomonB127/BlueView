@@ -31,6 +31,17 @@ a{
   align-items: center;
   flex-wrap: wrap;
 }
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 .flex-col-start {
   display: flex;
