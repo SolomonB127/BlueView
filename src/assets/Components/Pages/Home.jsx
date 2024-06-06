@@ -13,6 +13,9 @@ import contactImg from '/src/assets/Images/contact.jpg'
 // Icons
 import { HiLocationMarker } from "react-icons/hi";
 import { MdOutlineArrowDropDown } from 'react-icons/md';
+import { MdCall } from 'react-icons/md';
+import { BsFillChatDotsFill } from 'react-icons/bs';
+import { HiChatBubbleBottomCenter } from 'react-icons/hi2';
 
 // Libraries
 import CountUp from 'react-countup';
@@ -197,14 +200,33 @@ const Home = () => {
                 </section>
             </div>
         </section>
-
-        {/* Contact  */}
+        
+        {/* Contact */}
         <section className="c-wrapper">
             <div className="paddings inner-width flex-center c-container">
+                {/* left side */}
                 <section className="flex-col-start c-left">
-                    <span className='orangeText'>Our Contact</span>
-                    <span  className='primaryText'>Easy to Contact us</span>
-                    <span  className='secondaryText'>We are always ready to help by providing the best services for you. We believe a good place to live can make your life better.</span>
+                    <span className='orangeText'>Our Contacts</span>
+                    <span className='primaryText'>Easy to Contact us</span>
+                    <span className='secondaryText'>We are always ready to help by providing the best service.We believe a good place to <br /> live can  make your life better.</span>
+
+                    <div className="flex-col-start contactModes">
+                        {/* firstrow */}
+                        <section className="flex-col-start row">
+                            <div className="flex-col-center mode">
+                                <div className="flex-start">
+                                    <div className="flex-center icon">
+                                        <MdCall size={25} />
+                                    </div>
+                                    <div className="flex-col-start detail">
+                                        <span className='primaryText'>Call</span>
+                                        <span className='secondaryText'>080-111-222-33</span>
+                                    </div>
+                                </div>
+                                <div className="flex-center button">Call Now</div>
+                            </div>
+                        </section>
+                    </div>
                 </section>
                 <section className="c-right">
                     <div className="img-container">
