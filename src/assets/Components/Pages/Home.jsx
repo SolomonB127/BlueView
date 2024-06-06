@@ -212,7 +212,7 @@ const Home = () => {
 
                     <div className="flex-col-start contactModes">
                         {/* firstrow */}
-                        <section className="flex-col-start row">
+                        <section className="flex-start row">
                             <div className="flex-col-center mode">
                                 <div className="flex-start">
                                     <div className="flex-center icon">
@@ -224,6 +224,50 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="flex-center button">Call Now</div>
+                            </div>
+
+                            {/* second mode */}
+                            <div className="flex-col-center mode">
+                                <div className="flex-start">
+                                    <div className="flex-center icon">
+                                        <BsFillChatDotsFill size={25} />
+                                    </div>
+                                    <div className="flex-col-start detail">
+                                        <span className='primaryText'>Chat</span>
+                                        <span className='secondaryText'>080-111-222-33</span>
+                                    </div>
+                                </div>
+                                <div className="flex-center button">Chat Now</div>
+                            </div>
+                        </section>
+
+                        {/* second row */}
+                        <section className="flex-start row">
+                            <div className="flex-col-center mode">
+                                <div className="flex-start">
+                                    <div className="flex-center icon">
+                                        <BsFillChatDotsFill size={25} />
+                                    </div>
+                                    <div className="flex-col-start detail">
+                                        <span className='primaryText'>Video Call</span>
+                                        <span className='secondaryText'>080-111-222-33</span>
+                                    </div>
+                                </div>
+                                <div className="flex-center button">Video Call Now</div>
+                            </div>
+
+                            {/* second mode */}
+                            <div className="flex-col-center mode">
+                                <div className="flex-start">
+                                    <div className="flex-center icon">
+                                        <HiChatBubbleBottomCenter size={25} />
+                                    </div>
+                                    <div className="flex-col-start detail">
+                                        <span className='primaryText'>Message</span>
+                                        <span className='secondaryText'>080-111-222-33</span>
+                                    </div>
+                                </div>
+                                <div className="flex-center button">Message Now</div>
                             </div>
                         </section>
                     </div>
