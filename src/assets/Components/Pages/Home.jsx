@@ -279,6 +279,22 @@ const Home = () => {
                 </section>
             </div>
         </section>
+
+        {/* Get Started */}
+        <section className="g-wrapper">
+            <div className="paddings inner-width g-container">
+                <section className="flex-col-center inner-container">
+                    <span className='primaryText'>Get Started  with BlueView</span>
+                    <span className='secondaryText'>Subscribe and find super attractive price quotes tailored for you.
+                        <br />
+                        Find your residence soon.
+                    </span>
+                    <button className="button">
+                        <a href="mailto:solomonakinsulire@gmail.com" target='_blank' title='Email BlueView' rel='nofollow'>Get Started</a>
+                    </button>
+                </section>
+            </div>
+        </section>
     </main>
     )
 }
