@@ -3,6 +3,7 @@ import './stylesheets/Header.css'
 import Logo from '/src/assets/Images/BlueView-logo.png'
 import { Link, NavLink } from 'react-router-dom'
 import { BiMenuAltRight } from 'react-icons/bi'
+import OutsideClickHandler from 'react-outside-click-handler'
 const Header = () => {
     const [menuOpen,setMenuOpen] = useState(false);
     const getMenuStyles = (menuOpen) =>{
@@ -19,26 +20,29 @@ const Header = () => {
                     <Link to='/' className='img-link'>
                         <img src={Logo} alt="Logo" width={100}/>
                     </Link>
-
-                    <ul className="flex-center h-menu" style = {getMenuStyles(menuOpen)}>
-                        <li>
-                            <NavLink to='/residencies'>Residencies</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/values'>Our Values</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/contact'>Contact Us</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/user'>Get Started</NavLink>
-                        </li>
-                        <button className='button'>
+                    <OutsideClickHandler onOutsideClick={()=>[
+                        setMenuOpen(false)
+                    ]}>
+                        <ul className="flex-center h-menu" style = {getMenuStyles(menuOpen)}>
                             <li>
-                                <NavLink to=''>Contact</NavLink>
+                                <NavLink to='/residencies'>Residencies</NavLink>
                             </li>
-                        </button>
-                    </ul>
+                            <li>
+                                <NavLink to='/values'>Our Values</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/contact'>Contact Us</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/user'>Get Started</NavLink>
+                            </li>
+                            <button className='button'>
+                                <li>
+                                    <NavLink to=''>Contact</NavLink>
+                                </li>
+                            </button>
+                        </ul>
+                    </OutsideClickHandler>
 {/* Mobile Responsiveness */}
                 <section>
                     <div className="menu-icon" onClick={() => setMenuOpen ((prev) => !prev)}>
