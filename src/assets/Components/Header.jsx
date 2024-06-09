@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './stylesheets/Header.css'
 import Logo from '/src/assets/Images/BlueView-logo.png'
 import { Link, NavLink } from 'react-router-dom'
+import { BiMenuAltRight } from 'react-icons/bi'
 const Header = () => {
+    const [menuOpen,setMenuOpen] = useState(false);
+    const getMenuStyles = (menuOpen) =>{
+        if (document.documentElement.clientWidth <= 800)
+        {
+            return { right: !menuOpen && "-100%"};
+        }
+    }
     return (
         // Nav section
         <nav>
@@ -12,7 +20,7 @@ const Header = () => {
                         <img src={Logo} alt="Logo" width={100}/>
                     </Link>
 
-                    <ul className="flex-center h-menu">
+                    <ul className="flex-center h-menu" style = {getMenuStyles(menuOpen)}>
                         <li>
                             <NavLink to='/residencies'>Residencies</NavLink>
                         </li>
@@ -31,6 +39,12 @@ const Header = () => {
                             </li>
                         </button>
                     </ul>
+{/* Mobile Responsiveness */}
+                <section>
+                    <div className="menu-icon" onClick={() => setMenuOpen ((prev) => !prev)}>
+                        <BiMenuAltRight size={30} />
+                    </div>
+                </section>
                 </div>
             </section>
         </nav>
