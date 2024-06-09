@@ -313,4 +313,11 @@
     .cover-right{
         width: 100%;
     }
+    /* Residencies */
+    .r-head{
+        align-items: center;
+    }
+    .r-buttons{
+        position: initial;
+    }
 }
