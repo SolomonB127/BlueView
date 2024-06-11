@@ -20,6 +20,7 @@ import { HiChatBubbleBottomCenter } from 'react-icons/hi2';
 // Libraries
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { motion } from 'framer-motion';
 import 'swiper/css';
 import { 
     Accordion,
@@ -45,7 +46,13 @@ const Home = () => {
                 <div className="flex-col-start cover-left">
                     <section className='cover-title'>
                         <section className="glow" />
-                        <h1>Discover <br /> More Suitable <br /> Property</h1>
+                        <motion.h1 
+                        initial={{y: "2rem", opacity: "0"}}
+                        animate={{y: 0, opacity: 1}}
+                        transition={{
+                            duration: 3,
+                            type: "spring"
+                        }}>Discover <br /> More Suitable <br /> Property</motion.h1>
                     </section>
 
                     <section className="flex-col-start cover-desc">
@@ -93,9 +100,15 @@ const Home = () => {
                 </div>
 
                 <div className="flex-center cover-right">
-                    <section className="img-container">
+                    <motion.section 
+                    initial={{x: "7rem", opacity: 0}} 
+                    animate={{x: 0, opacity: 1}}
+                    transition={{
+                        duration: 3,
+                        type: "spring"
+                    }} className="img-container">
                         <img src={CoverImg} alt="" />
-                    </section>
+                    </motion.section>
                 </div>
             </div>
         </section>
