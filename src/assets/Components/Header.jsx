@@ -25,20 +25,20 @@ const Header = () => {
                     ]}>
                         <ul className="flex-center h-menu" style = {getMenuStyles(menuOpen)}>
                             <li>
-                                <NavLink to='/residencies'>Residencies</NavLink>
+                                <a href='#residencies'>Residencies</a>
                             </li>
                             <li>
-                                <NavLink to='/values'>Our Values</NavLink>
+                                <a href='#values'>Our Values</a>
                             </li>
                             <li>
-                                <NavLink to='/contact'>Contact Us</NavLink>
+                                <a href='#contact'>Contact Us</a>
                             </li>
                             <li>
-                                <NavLink to='/user'>Get Started</NavLink>
+                                <a href='#user'>Get Started</a>
                             </li>
                             <button className='button'>
                                 <li>
-                                    <NavLink to=''>Contact</NavLink>
+                                    <a href='#contact'>Contact</a>
                                 </li>
                             </button>
                         </ul>

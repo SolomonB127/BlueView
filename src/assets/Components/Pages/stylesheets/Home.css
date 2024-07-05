@@ -348,4 +348,10 @@
     .mpde{
         width: 100%;
     }
+
+    @media all and (max-width: 680px) {
+        .location{
+            display: none;
+        }
+    }
 }

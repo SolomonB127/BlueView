@@ -66,7 +66,7 @@ const Home = () => {
 
                     {/* search-bar */}
                     <section className="flex-center search-bar">
-                        <HiLocationMarker color='#4066ff' size={25} />
+                        <HiLocationMarker color='#4066ff' size={25} className='location'/>
                         <input type="text" name="" id="" />
                         <button className='button'>Search</button>
                     </section>
@@ -124,7 +124,7 @@ const Home = () => {
         </section>
 
         {/* Residencies */}
-        <section className="r-wrapper">
+        <section className="r-wrapper" id='residencies'>
             <div className="paddings inner-width r-container">
                 <section className="r-head flex-col-start">
                     <span className='orangeText'>Best Choices</span>
@@ -161,7 +161,7 @@ const Home = () => {
         </section>
 
         {/* Values*/}
-        <section className="v-wrapper">
+        <section className="v-wrapper" id='values'>
             <div className="paddings inner-width flex-center v-container">
                 <section className="v-left">
                     <div className="img-container">
@@ -218,7 +218,7 @@ const Home = () => {
         <section className="c-wrapper">
             <div className="paddings inner-width flex-center c-container">
                 {/* left side */}
-                <section className="flex-col-start c-left">
+                <section className="flex-col-start c-left" id='contact'>
                     <span className='orangeText'>Our Contacts</span>
                     <span className='primaryText'>Easy to Contact us</span>
                     <span className='secondaryText'>We are always ready to help by providing the best service.We believe a good place to <br /> live can  make your life better.</span>
@@ -294,7 +294,7 @@ const Home = () => {
         </section>
 
         {/* Get Started */}
-        <section className="g-wrapper">
+        <section className="g-wrapper" id='user'>
             <div className="paddings inner-width g-container">
                 <section className="flex-col-center inner-container">
                     <span className='primaryText'>Get Started  with BlueView</span>
